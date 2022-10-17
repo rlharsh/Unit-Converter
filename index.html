@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>PandaWeb Unit Converter</title>
+    <script src="https://kit.fontawesome.com/2c711007c8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="toasts"></div>
+    <main id="primary-container" class="content-wrapper">
+        <section id="top-container" class="container--top">
+            <header>
+                <label class="switch">
+                    <input type="checkbox" id="input-color-switch">
+                    <span class="slider round"></span>
+                    <!-- <label for="input-color-switch">Click to change color</label> -->
+                </label>
+                <h1 id="conversion-header" class="controls--header--text">Metric/Imperial Unit Conversion</h1>
+                <input type="text" id="conversion-integer" class="controls--integer--input"/>
+            </header>
+        </section>
+
+        <section id="conversions-container" class="container--primary">
+            
+            <header id="group-instructions" class="controls--instructions"><span class="cta">NOTE: </span>Click on any of the tiles below to copy the converted
+                data to your clipboard.
+            </header>
+
+            <section id="length-conversion-group-container" onclick="lengthOnClick()" class="container--group">
+                <h1 id="length-header" class="controls--group--header">Length (Meter/Feet)</h1>
+                <p id="description-length" class="controls--group--description">Input an integer above</h1>
+            </section>
+
+            <section id="volume-conversion-group-container" onclick="volumeOnClick()" class="container--group">
+                <h1 id="volume-header" class="controls--group--header">Volume (Liters/Gallons)</h1>
+                <p id="description-volume" class="controls--group--description">Input an integer above</h1>
+            </section>
+
+            <section id="mass-conversion-group-container" onclick="massOnClick()" class="container--group">
+                <h1 id="mass-header" class="controls--group--header">Mass (Kilograms/Pounds)</h1>
+                <p id="description-mass" class="controls--group--description">Input an integer above</h1>
+            </section>
+        </section>
+    </main>
+
+    <footer id="page-footer" class="container--footer">
+        <p>This page was programmed with panda love!</p>
+        <img class="image--footer" src="./assets/images/pandaweb.png" alt="PandaWeb.io Logo" loading="lazy">
+    </footer>
+
+    <script src="./theme.js"></script>
+    <script src="./converter.js"></script>
+</body>
+</html>
